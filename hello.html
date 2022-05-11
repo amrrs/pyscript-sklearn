@@ -1,0 +1,40 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css"/>
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    <py-env>
+        - numpy
+        - matplotlib
+        - scikit-learn
+        - pandas
+        - joblib
+        - paths:
+          - utils.py
+    </py-env>
+</head>
+
+<body>
+<h1 style="color:black;font-size:40px;">Deep Learning in your browser with PyScript!</h1>
+</br>
+  <div>Epochs: </div>
+  <input style="background-color: yellow;"  type="number" id="input-epochs", value="50"/>
+  <button id="submit-button" type="submit">Submit</button>
+</br>
+</br>
+  <div>Hidden Layers and Size (e.g. 4,3 means 2 hidden layers with sizes 4 and 3): </div>
+  <input style="background-color: yellow;"  type="text" id="input-hidden-layer-sizes", value="4,3"/>
+  <button id="submit-button" type="submit">Submit</button>
+</br>
+</br>
+<p>After you've clicked "Submit" on all your inputs, the training script is executed using PyScript (takes a
+    moment)...</p>
+</br>
+<div id="script"></div>
+<py-script src="script.py"></py-script>
+</br>
+</br>
+<h1 style="color:black;font-size:20px;">We can continue directly with an interactive session and also use results from
+    the training script that are still in disk or in memory...</h1>
+<py-repl id="my-repl" auto-generate="true"></py-repl>
+</body>
+</html>
